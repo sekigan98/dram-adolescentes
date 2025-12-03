@@ -15,10 +15,11 @@ export default function Navbar() {
     { href: "#contacto", label: "Contacto" },
   ];
 
-  // Detecta la sección activa al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 100; // offset para navbar fijo
+      let found = false;
+
       links.forEach((link) => {
         const section = document.querySelector(link.href);
         if (section) {
@@ -26,9 +27,16 @@ export default function Navbar() {
           const bottom = top + section.getBoundingClientRect().height;
           if (scrollPos >= top && scrollPos < bottom) {
             setActive(link.href);
+            found = true;
           }
         }
       });
+
+      // ✅ fallback: si no se encontró nada, marcamos la última sección
+      if (!found) {
+        const last = links[links.length - 1];
+        setActive(last.href);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,7 +46,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow-sm z-50">
       <div className="container flex items-center justify-between h-16">
-        {/* Logo / Marca */}
+        {/* Logo */}
         <Link href="/" className="font-bold text-brand-800 text-lg sm:text-xl">
           Adolescencia para Padres
         </Link>
@@ -71,7 +79,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Menú desplegable en mobile */}
+      {/* Menú mobile */}
       {open && (
         <div className="sm:hidden bg-white border-t shadow-md">
           <ul className="flex flex-col p-4 gap-3">
