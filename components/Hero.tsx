@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="section-y pt-24"> {/* pt-24 para compensar navbar fijo */}
-      <div className="container-padding max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div className="container grid md:grid-cols-2 gap-8 items-center max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -17,11 +17,11 @@ export default function Hero() {
             Valeria Merino te comparte herramientas simples y efectivas para comunicar mejor,
             motivar con calma y poner límites claros.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#talleres" className="btn btn-primary px-6 py-3">
+          <div className="mt-6 flex flex-wrap gap-3 justify-center sm:justify-start">
+            <a href="#talleres" className="btn btn-primary">
               Ver talleres
             </a>
-            <a href="#programa" className="btn btn-outline px-6 py-3">
+            <a href="#programa" className="btn btn-outline">
               Sobre el programa
             </a>
           </div>
@@ -31,17 +31,18 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative aspect-video rounded-2xl overflow-hidden card"
+          className="video-wrapper card"
         >
           <iframe
             src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
             title="Presentación de Valeria Merino"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-full"
+            className="w-full h-full rounded-xl"
           />
         </motion.div>
       </div>
     </section>
   );
 }
+
