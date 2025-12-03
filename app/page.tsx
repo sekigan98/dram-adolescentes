@@ -11,13 +11,14 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <Section
-        id="sesiones"
-        title="Sesiones individuales"
-        subtitle="Acompañamiento personalizado para padres de adolescentes"
-      >
-        <Benefits />
-      </Section>
+<Section
+  id="sesiones"
+  title="Sesiones individuales"
+  subtitle="Un espacio 1 a 1 para transformar tu vínculo con tu hijo adolescente"
+>
+  <Benefits />
+</Section>
+
 
       <Section
         id="talleres"
