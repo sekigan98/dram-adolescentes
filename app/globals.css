@@ -9,13 +9,6 @@
   --muted: #6b7280;
 }
 
-/* Dark mode opcional */
-[data-theme="dark"] {
-  --bg: #0f172a;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +18,7 @@ body {
   color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
-  @apply antialiased;
+  @apply antialiased leading-relaxed;
 }
 
 /* Contenedor general con padding y ancho máximo */
@@ -40,20 +33,29 @@ body {
 
 /* Tarjetas */
 .card {
-  @apply rounded-2xl bg-white/80 backdrop-blur shadow-sm ring-1 ring-gray-200;
+  @apply rounded-2xl bg-white/90 backdrop-blur shadow-md ring-1 ring-gray-200 transition-transform duration-200;
+}
+.card:hover {
+  @apply scale-[1.02] shadow-lg;
 }
 
 /* Botones */
 .btn {
-  @apply inline-flex items-center justify-center rounded-full font-medium transition-colors px-6 py-3;
+  @apply inline-flex items-center justify-center rounded-full font-medium transition-all duration-200 px-6 py-3;
 }
 
 .btn-primary {
   @apply btn bg-brand-700 text-white hover:bg-brand-800 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
 }
+.btn-primary:hover {
+  @apply scale-[1.02];
+}
 
 .btn-outline {
   @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
+}
+.btn-outline:hover {
+  @apply scale-[1.02];
 }
 
 /* Ajustes para grids y responsive */
@@ -63,5 +65,6 @@ body {
 
 /* Video embebido con proporción fija */
 .video-wrapper {
-  @apply aspect-video w-full max-w-screen-md mx-auto;
+  @apply aspect-video w-full max-w-screen-md mx-auto rounded-xl shadow-md overflow-hidden;
 }
+
