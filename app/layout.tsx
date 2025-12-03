@@ -1,5 +1,7 @@
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -46,8 +48,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" dir="ltr">
-      <body className="pt-16"> {/* ✅ Compensa navbar fijo de h-16 */}
-        {children}
+      <body className="pt-16 bg-[var(--bg)] text-[var(--text)] antialiased leading-relaxed">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
         <WhatsAppButton />
       </body>
     </html>
