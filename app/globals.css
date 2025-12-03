@@ -48,14 +48,14 @@ body {
   @apply btn bg-brand-700 text-white hover:bg-brand-800 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
 }
 .btn-primary:hover {
-  @apply scale-[1.02];
+  @apply scale-[1.03];
 }
 
 .btn-outline {
   @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
 }
 .btn-outline:hover {
-  @apply scale-[1.02];
+  @apply scale-[1.03];
 }
 
 /* Ajustes para grids y responsive */
@@ -68,3 +68,24 @@ body {
   @apply aspect-video w-full max-w-screen-md mx-auto rounded-xl shadow-md overflow-hidden;
 }
 
+/* --- NUEVO: Tipografía global para títulos y subtítulos --- */
+h1 {
+  @apply text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-900 leading-tight;
+}
+
+h2 {
+  @apply text-2xl sm:text-3xl font-semibold text-brand-800 mt-2;
+}
+
+h3 {
+  @apply text-xl sm:text-2xl font-medium text-brand-700 mt-2;
+}
+
+.subtitle {
+  @apply text-base sm:text-lg text-gray-600;
+}
+
+/* --- NUEVO: Separadores suaves entre secciones --- */
+.section-divider {
+  @apply border-t border-gray-200 my-12;
+}
