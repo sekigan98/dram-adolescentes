@@ -1,9 +1,18 @@
 import MotionFade from "./MotionFade";
 
 const faqs = [
-  { title: "¿Qué pasa si no puedo asistir en vivo?", desc: "Recibís la grabación completa." },
-  { title: "¿Cómo se accede a los cursos?", desc: "Por Zoom, con link enviado por WhatsApp." },
-  { title: "¿Qué formas de pago aceptan?", desc: "Solo se acepta transferencia bancaria." },
+  {
+    title: "¿Qué pasa si no puedo asistir en vivo?",
+    desc: "Recibís la grabación completa para verla cuando quieras.",
+  },
+  {
+    title: "¿Cómo se accede a los cursos?",
+    desc: "Por Zoom, con link enviado directamente por WhatsApp de Vale.",
+  },
+  {
+    title: "¿Qué formas de pago aceptan?",
+    desc: "Transferencia bancaria en Argentina.",
+  },
 ];
 
 export default function FAQ() {
@@ -12,12 +21,12 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto text-center">
         <h2>Preguntas frecuentes</h2>
         <p className="subtitle mt-2 mb-10 max-w-prose mx-auto">
-          Respondemos las dudas más comunes antes de inscribirte
+          Respondemos las dudas más comunes antes de inscribirte, para que te sientas seguro al elegir.
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {faqs.map((f, i) => (
             <MotionFade key={f.title} delay={i * 0.1}>
-              <div className="card p-6 text-center sm:text-left">
+              <div className="card p-6 text-center sm:text-left hover:shadow-lg transition-shadow">
                 <h3>{f.title}</h3>
                 <p className="mt-2 text-gray-600">{f.desc}</p>
               </div>
