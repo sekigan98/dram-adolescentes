@@ -1,29 +1,22 @@
 import MotionFade from "./MotionFade";
 
 const faqs = [
-  {
-    title: "¿Qué pasa si no puedo asistir en vivo?",
-    desc: "Recibís la grabación completa.",
-  },
-  {
-    title: "¿Cómo se accede a los cursos?",
-    desc: "Por Zoom, con link enviado por WhatsApp.",
-  },
-  {
-    title: "¿Qué formas de pago aceptan?",
-    desc: "Solo se acepta transferencia bancaria.",
-  },
+  { title: "¿Qué pasa si no puedo asistir en vivo?", desc: "Recibís la grabación completa." },
+  { title: "¿Cómo se accede a los cursos?", desc: "Por Zoom, con link enviado por WhatsApp." },
+  { title: "¿Qué formas de pago aceptan?", desc: "Solo se acepta transferencia bancaria." },
 ];
 
 export default function FAQ() {
   return (
-    <section id="faq" className="mt-20 px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="section-y scroll-mt-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-brand-800 mb-4">Preguntas frecuentes</h2>
-        <p className="text-lg text-gray-700 mb-10">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-brand-800 mb-4">
+          Preguntas frecuentes
+        </h2>
+        <p className="text-base sm:text-lg text-gray-700 mb-10">
           Respondemos las dudas más comunes antes de inscribirte
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-left">
           {faqs.map((f, i) => (
             <MotionFade key={f.title} delay={i * 0.1}>
               <div className="card p-6">
