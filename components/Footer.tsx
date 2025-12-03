@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Adolescencia para Padres</h4>
             <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
-              Cursos online en video para acompañar a tus hijos adolescentes con calma y claridad.
+              Cursos online en video para acompañar a tus hijos adolescentes con herramientas efectivas.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
               className="mt-2 inline-flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-700 hover:text-brand-700 transition-colors"
             >
               <FaWhatsapp className="text-green-500 text-lg" />
-              WhatsApp: +54 9 2236 86-1939
+              Hablá con Vale por WhatsApp
             </a>
           </div>
 
