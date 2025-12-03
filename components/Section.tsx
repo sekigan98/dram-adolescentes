@@ -4,7 +4,7 @@ export default function Section({
   id,
   title,
   subtitle,
-  children
+  children,
 }: {
   id?: string;
   title: string;
@@ -18,8 +18,12 @@ export default function Section({
     >
       <Container>
         <div className="mb-10 text-center sm:text-left">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-brand-900">{title}</h2>
-          {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
+          <h2>{title}</h2>
+          {subtitle && (
+            <p className="subtitle mt-2 max-w-prose mx-auto sm:mx-0">
+              {subtitle}
+            </p>
+          )}
         </div>
         {children}
       </Container>
