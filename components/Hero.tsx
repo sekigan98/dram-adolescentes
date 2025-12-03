@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="container grid gap-12 md:grid-cols-2 items-center">
         {/* Texto primero en mobile */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 8 }}   // ✅ desplazamiento reducido
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
@@ -47,4 +47,3 @@ export default function Hero() {
     </section>
   );
 }
-
