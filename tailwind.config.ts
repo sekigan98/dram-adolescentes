@@ -1,26 +1,34 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}", // 👈 opcional si usás pages
+  ],
   theme: {
     extend: {
       colors: {
         brand: {
-          50: "#f7fafc",
-          100: "#eef6f8",
-          200: "#dbeaf0",
-          300: "#bfd8e3",
-          400: "#98bccd",
-          500: "#6e9eb7",
-          600: "#4e7f9c",
-          700: "#3c647f",
-          800: "#2f4e64",
-          900: "#243c4e"
-        }
-      }
-    }
+          50: "#f5f9ff",
+          100: "#e0ecff",
+          200: "#b8d4ff",
+          300: "#8fbaff",
+          400: "#5f9eff",
+          500: "#367fff",
+          600: "#1d65e6",
+          700: "#154db4",
+          800: "#0f397f",
+          900: "#08234a",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"], // 👈 tipografía global
+      },
+    },
   },
-  plugins: []
+  darkMode: ["class", '[data-theme="dark"]'], // 👈 soporta toggle con class o atributo
+  plugins: [],
 };
 
 export default config;
