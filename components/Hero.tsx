@@ -33,15 +33,17 @@ export default function Hero() {
           </div>
         </MotionFade>
 
-        {/* Video */}
+        {/* Video propio */}
         <MotionFade delay={0.2}>
           <div className="video-wrapper card mx-auto shadow-lg rounded-2xl overflow-hidden">
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-              title="Presentación de Valeria Merino"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
+            <video
+              src="/videos/hero.mp4"   // 👈 coloca tu archivo en public/videos
+              autoPlay
+              muted
+              loop
+              controls
+              poster="/videos/hero-poster.jpg" // 👈 opcional: imagen previa
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
         </MotionFade>
@@ -49,3 +51,4 @@ export default function Hero() {
     </section>
   );
 }
+
