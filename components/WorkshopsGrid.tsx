@@ -9,7 +9,7 @@ export default function WorkshopsGrid() {
           key={w.slug}
           slug={w.slug}
           title={w.title}
-          short={w.short}
+          short={w.short}   // 👈 ahora cada curso tiene su descripción corta en data.ts
           waLink={w.waLink}
         />
       ))}
