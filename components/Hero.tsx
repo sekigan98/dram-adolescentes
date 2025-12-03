@@ -3,7 +3,7 @@ import MotionFade from "./MotionFade";
 
 export default function Hero() {
   return (
-    <section className="section-y scroll-mt-16 bg-gradient-to-br from-brand-100 via-brand-50 to-white">
+    <section className="section-y scroll-mt-16 hero-gradient">
       {/* ✅ Fondo degradado premium */}
       <div className="container grid gap-12 md:grid-cols-2 items-center">
         {/* Texto */}
@@ -26,9 +26,9 @@ export default function Hero() {
               </a>
               <a
                 href="#promos"
-                className="btn btn-outline hover:scale-[1.05] transition-transform"
+                className="btn-emotional hover:scale-[1.05] transition-transform"
               >
-                📅 Sesiones individuales
+                ❤️ Lo quiero ahora
               </a>
             </div>
           </div>
@@ -52,4 +52,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
