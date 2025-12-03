@@ -8,18 +8,51 @@
   --muted: #6b7280;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
   font-feature-settings: "liga" 1, "calt" 1;
+  @apply antialiased;
 }
 
-.container-padding { @apply px-4 sm:px-6 lg:px-8; }
-.section-y { @apply py-12 sm:py-16 lg:py-20; }
+/* Contenedor general con padding y ancho máximo */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl;
+}
 
-.card { @apply rounded-2xl bg-white/80 backdrop-blur shadow-sm ring-1 ring-gray-200; }
+/* Espaciado vertical para secciones */
+.section-y {
+  @apply py-12 sm:py-16 lg:py-20;
+}
 
-.btn { @apply inline-flex items-center justify-center rounded-full font-medium transition-colors; }
-.btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-800 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600; }
-.btn-outline { @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50; }
+/* Tarjetas */
+.card {
+  @apply rounded-2xl bg-white/80 backdrop-blur shadow-sm ring-1 ring-gray-200;
+}
+
+/* Botones */
+.btn {
+  @apply inline-flex items-center justify-center rounded-full font-medium transition-colors px-6 py-3;
+}
+
+.btn-primary {
+  @apply btn bg-brand-700 text-white hover:bg-brand-800 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
+}
+
+.btn-outline {
+  @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50;
+}
+
+/* Ajustes para grids y responsive */
+.grid-responsive {
+  @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Video embebido con proporción fija */
+.video-wrapper {
+  @apply aspect-video w-full max-w-screen-md mx-auto;
+}
