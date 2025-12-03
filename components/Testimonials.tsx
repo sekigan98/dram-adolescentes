@@ -23,11 +23,11 @@ export default function Testimonials() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {testimonials.map((t, i) => (
         <MotionFade key={t.name} delay={i * 0.1}>
-          <div className="card p-6 text-center">
+          <div className="card p-6 text-center sm:text-left">
             <img
               src={t.img}
               alt={t.name}
-              className="mx-auto h-16 w-16 rounded-full object-cover"
+              className="mx-auto sm:mx-0 h-16 w-16 rounded-full object-cover"
             />
             <p className="mt-4 text-gray-600">“{t.text}”</p>
             <h4 className="mt-2 font-semibold text-brand-800">{t.name}</h4>
