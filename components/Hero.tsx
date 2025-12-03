@@ -26,9 +26,9 @@ export default function Hero() {
                 🎓 Quiero talleres
               </a>
 
-              {/* Botón sesiones → WhatsApp directo */}
+              {/* Botón sesiones → WhatsApp directo con mensaje cálido */}
               <a
-                href="https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20agendar%20una%20sesión%20individual"
+                href="https://wa.me/5492236861939?text=Hola%20Vale%2C%20me%20interesa%20una%20sesión%20individual%20para%20transformar%20mi%20vínculo%20con%20mi%20hijo.%20¿Me%20contás%20más?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-emotional hover:scale-[1.05] transition-transform"
