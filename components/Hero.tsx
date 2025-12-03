@@ -3,17 +3,18 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="section-y pt-24"> {/* pt-24 para compensar navbar fijo */}
-      <div className="container grid md:grid-cols-2 gap-8 items-center max-w-6xl">
+    <section className="section-y pt-32 scroll-mt-32"> {/* ✅ más aire para navbar fijo */}
+      <div className="container grid gap-12 md:grid-cols-2 items-center">
+        {/* ✅ Texto primero en mobile */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-900">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-brand-900 text-center sm:text-left">
             Cursos online para padres de adolescentes
           </h1>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-base sm:text-lg text-gray-600 text-center sm:text-left">
             Valeria Merino te comparte herramientas simples y efectivas para comunicar mejor,
             motivar con calma y poner límites claros.
           </p>
@@ -27,11 +28,12 @@ export default function Hero() {
           </div>
         </motion.div>
 
+        {/* ✅ Video con proporción y centrado */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="video-wrapper card"
+          className="video-wrapper card mx-auto"
         >
           <iframe
             src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
@@ -45,4 +47,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
