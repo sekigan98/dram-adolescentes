@@ -7,7 +7,7 @@ export default function Navbar() {
   const [active, setActive] = useState<string>("");
 
   const links = [
-    { href: "#programa", label: "Programa" },
+    { href: "#promos", label: "Sesiones individuales" }, // 👈 antes decía Programa
     { href: "#talleres", label: "Talleres" },
     { href: "#promos", label: "Promos" },
     { href: "#testimonios", label: "Testimonios" },
