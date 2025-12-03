@@ -38,11 +38,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow-sm z-50">
       <div className="container flex items-center justify-between h-16">
+        {/* Logo / Marca */}
         <Link href="/" className="font-bold text-brand-800 text-lg sm:text-xl">
           Adolescencia para Padres
         </Link>
 
-        {/* Botón hamburguesa */}
+        {/* Botón hamburguesa en mobile */}
         <button
           className="sm:hidden btn btn-outline px-3 py-1"
           onClick={() => setOpen(!open)}
@@ -51,14 +52,16 @@ export default function Navbar() {
           ☰
         </button>
 
-        {/* Links desktop */}
+        {/* Links en desktop */}
         <ul className="hidden sm:flex gap-6 font-medium text-gray-700">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.href} className="relative">
               <a
                 href={l.href}
-                className={`transition-colors ${
-                  active === l.href ? "text-brand-700 font-semibold" : "hover:text-brand-700"
+                className={`transition-colors pb-1 ${
+                  active === l.href
+                    ? "text-brand-700 font-semibold after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-brand-700 after:rounded-full after:transition-all after:duration-300"
+                    : "hover:text-brand-700"
                 }`}
               >
                 {l.label}
@@ -68,7 +71,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Menú mobile */}
+      {/* Menú desplegable en mobile */}
       {open && (
         <div className="sm:hidden bg-white border-t shadow-md">
           <ul className="flex flex-col p-4 gap-3">
@@ -77,7 +80,9 @@ export default function Navbar() {
                 <a
                   href={l.href}
                   className={`block py-2 transition-colors ${
-                    active === l.href ? "text-brand-700 font-semibold" : "hover:text-brand-700"
+                    active === l.href
+                      ? "text-brand-700 font-semibold"
+                      : "hover:text-brand-700"
                   }`}
                   onClick={() => setOpen(false)}
                 >
