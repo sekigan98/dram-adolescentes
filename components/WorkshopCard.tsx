@@ -13,7 +13,7 @@ export default function WorkshopCard({
 }) {
   return (
     <MotionFade>
-      <div className="card p-6 flex flex-col justify-between">
+      <div className="card p-6 flex flex-col justify-between text-center sm:text-left">
         <div>
           <h3 className="font-semibold text-brand-800">{title}</h3>
           <p className="mt-2 text-gray-600">{short}</p>
