@@ -17,7 +17,7 @@ export default function Section({
       className={`section-y ${id ? "scroll-mt-32" : ""}`} // ✅ compensar navbar fijo
     >
       <Container>
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl font-semibold text-brand-900">{title}</h2>
           {subtitle && <p className="mt-2 text-gray-600">{subtitle}</p>}
         </div>
