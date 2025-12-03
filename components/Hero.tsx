@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="section-y pt-40 sm:pt-48 scroll-mt-40">
+    <section className="section-y pt-[120px] sm:pt-[160px] scroll-mt-[120px] sm:scroll-mt-[160px]">
   <div className="container grid gap-12 md:grid-cols-2 items-center">
     {/* Texto */}
     <motion.div
