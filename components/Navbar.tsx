@@ -7,9 +7,9 @@ export default function Navbar() {
   const [active, setActive] = useState<string>("");
 
   const links = [
-    { href: "#promos", label: "Sesiones individuales" }, // 👈 antes decía Programa
+    { href: "#sesiones", label: "Sesiones individuales" }, // 👈 ahora apunta al bloque correcto
     { href: "#talleres", label: "Talleres" },
-    { href: "#promos", label: "Promos" },
+    { href: "#promos", label: "Promos y packs" },
     { href: "#testimonios", label: "Testimonios" },
     { href: "#faq", label: "Preguntas frecuentes" },
     { href: "#contacto", label: "Contacto" },
