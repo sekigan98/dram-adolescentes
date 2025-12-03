@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables base */
 :root {
   --bg: #fbfbfc;
   --text: #1f2937;
   --muted: #6b7280;
+}
+
+/* Dark mode opcional */
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
 }
 
 html {
@@ -15,6 +23,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
   @apply antialiased;
 }
@@ -44,7 +53,7 @@ body {
 }
 
 .btn-outline {
-  @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50;
+  @apply btn border border-brand-700 text-brand-700 hover:bg-brand-50 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-600;
 }
 
 /* Ajustes para grids y responsive */
