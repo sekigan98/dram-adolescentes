@@ -13,8 +13,8 @@ export default function HomePage() {
 
       <Section
         id="programa"
-        title="Sobre el programa"
-        subtitle="Herramientas prácticas para padres de adolescentes"
+        title="Sesiones individuales"
+        subtitle="Acompañamiento personalizado para padres de adolescentes"
       >
         <Benefits />
       </Section>
@@ -47,3 +47,4 @@ export default function HomePage() {
     </>
   );
 }
+
