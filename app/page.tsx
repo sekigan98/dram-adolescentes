@@ -1,17 +1,14 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import Benefits from "@/components/Benefits";
 import WorkshopsGrid from "@/components/WorkshopsGrid";
-import Promos from "@/components/Promos";   // 👈 IMPORTAR PROMOS
+import Promos from "@/components/Promos";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <Hero />
 
       <Section
@@ -47,7 +44,6 @@ export default function HomePage() {
       </Section>
 
       <FAQ />
-      <Footer />
     </>
   );
 }
