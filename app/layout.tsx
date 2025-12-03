@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Adolescencia para Padres – Talleres Online",
   description:
-    "Cursos prácticos para acompañar a tu hijo adolescente: comunicación, límites, autoestima y más.",
+    "Herramientas prácticas y cercanas para acompañar a tu hijo adolescente con confianza y claridad.",
   keywords: [
     "adolescentes",
     "padres",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "autoestima",
     "talleres online",
   ],
-  authors: [{ name: "Valeria" }],
+  authors: [{ name: "Vale Merino" }],
   alternates: {
     canonical: "https://adolescencia-para-padres.vercel.app",
   },
