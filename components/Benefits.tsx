@@ -20,7 +20,7 @@ export default function Benefits() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {benefits.map((b, i) => (
         <MotionFade key={b.title} delay={i * 0.1}>
-          <div className="card p-6">
+          <div className="card p-6 text-center sm:text-left">
             <h3 className="font-semibold text-brand-800">{b.title}</h3>
             <p className="mt-2 text-gray-600">{b.desc}</p>
           </div>
