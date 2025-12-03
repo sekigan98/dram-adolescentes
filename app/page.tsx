@@ -12,7 +12,7 @@ export default function HomePage() {
       <Hero />
 
       <Section
-        id="programa"
+        id="sesiones"
         title="Sesiones individuales"
         subtitle="Acompañamiento personalizado para padres de adolescentes"
       >
@@ -29,7 +29,7 @@ export default function HomePage() {
 
       <Section
         id="promos"
-        title="Promos y sesiones"
+        title="Promos y packs"
         subtitle="Aprovechá las ofertas especiales"
       >
         <Promos />
