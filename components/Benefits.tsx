@@ -21,21 +21,30 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {benefits.map((b, i) => {
-        const Icon = b.icon;
-        return (
-          <MotionFade key={b.title} delay={i * 0.1}>
-            <div className="card p-6 text-center sm:text-left hover:shadow-lg transition-shadow">
-              <div className="flex justify-center sm:justify-start mb-4">
-                <Icon className="text-brand-700 text-3xl" />
-              </div>
-              <h3>{b.title}</h3>
-              <p className="subtitle mt-2">{b.desc}</p>
-            </div>
-          </MotionFade>
-        );
-      })}
-    </div>
+    <section className="section-y scroll-mt-32">
+      <div className="container text-center sm:text-left">
+        <h2>Beneficios principales</h2>
+        <p className="subtitle mt-2 mb-10 max-w-prose mx-auto sm:mx-0">
+          Lo que vas a lograr al aplicar estas herramientas en tu día a día.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((b, i) => {
+            const Icon = b.icon;
+            return (
+              <MotionFade key={b.title} delay={i * 0.1}>
+                <div className="card p-6 text-center sm:text-left hover:shadow-lg transition-shadow">
+                  <div className="flex justify-center sm:justify-start mb-4">
+                    <Icon className="text-brand-700 text-3xl" />
+                  </div>
+                  <h3>{b.title}</h3>
+                  <p className="subtitle mt-2">{b.desc}</p>
+                </div>
+              </MotionFade>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
