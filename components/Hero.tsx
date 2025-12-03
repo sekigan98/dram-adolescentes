@@ -10,11 +10,12 @@ export default function Hero() {
         <MotionFade>
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-900 text-center sm:text-left leading-tight">
-              Acompañá a tu hijo adolescente con calma y claridad
+              Acompañá a tu hijo adolescente con herramientas efectivas
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-700 text-center sm:text-left max-w-lg">
-              Cursos online con herramientas simples y efectivas para comunicar mejor,
-              motivar con confianza y poner límites claros.
+              Con mis talleres y sesiones individuales vas a aprender herramientas para dejar de
+              padecer la adolescencia de tu hijo y empezar a disfrutarla. Comprobado personalmente
+              con mis 4 hijos y las cientos de familias que acompañé.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center sm:justify-start">
               <a
@@ -24,10 +25,10 @@ export default function Hero() {
                 🚀 Ver talleres
               </a>
               <a
-                href="#programa"
+                href="#promos"
                 className="btn btn-outline hover:scale-[1.05] transition-transform"
               >
-                📘 Sobre el programa
+                📅 Sesiones individuales
               </a>
             </div>
           </div>
