@@ -16,10 +16,10 @@ export default function FAQ() {
         <p className="text-base sm:text-lg text-gray-700 mb-10">
           Respondemos las dudas más comunes antes de inscribirte
         </p>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-left">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {faqs.map((f, i) => (
             <MotionFade key={f.title} delay={i * 0.1}>
-              <div className="card p-6">
+              <div className="card p-6 text-center sm:text-left">
                 <h3 className="font-semibold text-brand-800">{f.title}</h3>
                 <p className="mt-2 text-gray-600">{f.desc}</p>
               </div>
