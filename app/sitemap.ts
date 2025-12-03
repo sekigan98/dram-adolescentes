@@ -1,6 +1,4 @@
 import { MetadataRoute } from 'next'
-
-// Si tenés un array de talleres en app/talleres/data.ts, podés importarlo:
 import { workshops } from './talleres/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -40,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Rutas dinámicas de talleres (si usás slugs en /talleres/[slug])
+  // Rutas dinámicas de talleres
   const workshopRoutes: MetadataRoute.Sitemap = workshops.map((workshop) => ({
     url: `${baseUrl}/talleres/${workshop.slug}`,
     lastModified: new Date(),
@@ -50,3 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticRoutes, ...workshopRoutes]
 }
+
+
