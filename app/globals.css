@@ -68,7 +68,7 @@ body {
   @apply aspect-video w-full max-w-screen-md mx-auto rounded-xl shadow-md overflow-hidden;
 }
 
-/* --- NUEVO: Tipografía global para títulos y subtítulos --- */
+/* --- Tipografía global para títulos y subtítulos --- */
 h1 {
   @apply text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-900 leading-tight;
 }
@@ -85,7 +85,22 @@ h3 {
   @apply text-base sm:text-lg text-gray-600;
 }
 
-/* --- NUEVO: Separadores suaves entre secciones --- */
+/* --- Separadores suaves entre secciones --- */
 .section-divider {
   @apply border-t border-gray-200 my-12;
 }
+
+/* --- Animación personalizada para WhatsAppButton --- */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6%);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2.5s infinite;
+}
+
