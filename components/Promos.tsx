@@ -11,7 +11,7 @@ const promos = [
   },
   {
     title: "Promo: si llevás 2 te regalo 1",
-    desc: "El curso de regalo es uno de los que menos se venden y no se puede elegir.",
+    desc: "Con la adquisición de 2 cursos te regalo uno completamente gratis",
     waLink:
       "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%20si%20llevás%202%20te%20regalás%201",
     icon: HiGift,
