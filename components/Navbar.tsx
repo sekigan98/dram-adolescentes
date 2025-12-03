@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const links = [
     { href: "#programa", label: "Programa" },
@@ -33,6 +32,7 @@ export default function Navbar() {
         }
       });
 
+      // ✅ fallback: si no se encontró nada, marcamos la última sección
       if (!found) {
         const last = links[links.length - 1];
         setActive(last.href);
@@ -43,11 +43,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ✅ Dark mode toggle
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow-sm z-50">
       <div className="container flex items-center justify-between h-16">
@@ -57,15 +52,6 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-4">
-          {/* Toggle dark mode */}
-          <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="btn btn-outline px-3 py-1"
-            aria-label="Cambiar tema"
-          >
-            {theme === "light" ? "🌙" : "☀️"}
-          </button>
-
           {/* Botón hamburguesa en mobile */}
           <button
             className="sm:hidden btn btn-outline px-3 py-1"
@@ -120,4 +106,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
