@@ -18,17 +18,22 @@ export default function Hero() {
               con mis 4 hijos y las cientos de familias que acompañé.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center sm:justify-start">
+              {/* Botón talleres → scroll */}
               <a
                 href="#talleres"
                 className="btn btn-primary hover:scale-[1.05] transition-transform"
               >
-                🚀 Ver talleres
+                🎓 Quiero talleres
               </a>
+
+              {/* Botón sesiones → WhatsApp directo */}
               <a
-                href="#promos"
+                href="https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20agendar%20una%20sesión%20individual"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-emotional hover:scale-[1.05] transition-transform"
               >
-                ❤️ Lo quiero ahora
+                ❤️ Quiero sesiones
               </a>
             </div>
           </div>
@@ -52,5 +57,4 @@ export default function Hero() {
     </section>
   );
 }
-
 
