@@ -12,11 +12,11 @@ export default function HomePage() {
       <Hero />
 
 <Section
-  id="sesiones"
-  title="Sesiones individuales"
-  subtitle="Un espacio 1 a 1 para transformar tu vínculo con tu hijo adolescente"
+  id="talleres"
+  title="Mis cursos"
+  subtitle="Elegí el que mejor se adapte a vos"
 >
-  <Benefits />
+  <WorkshopsGrid />
 </Section>
 
 
