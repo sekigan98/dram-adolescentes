@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     title: "¿Qué formas de pago aceptan?",
-    desc: "Transferencia bancaria en Argentina.",
+    desc: "Se puede abonar mediante PayPal, Western Union o transferencia bancaria.",
   },
 ];
 
