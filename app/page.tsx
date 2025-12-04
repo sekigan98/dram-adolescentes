@@ -11,6 +11,7 @@ export default function HomePage() {
     <>
       <Hero />
 
+
 <Section
   id="talleres"
   title="Mis cursos"
@@ -18,15 +19,6 @@ export default function HomePage() {
 >
   <WorkshopsGrid />
 </Section>
-
-
-      <Section
-        id="talleres"
-        title="Nuestros talleres"
-        subtitle="Elegí el que mejor se adapte a vos"
-      >
-        <WorkshopsGrid />
-      </Section>
 
       <Section
         id="promos"
