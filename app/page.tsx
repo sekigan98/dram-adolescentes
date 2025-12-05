@@ -37,8 +37,6 @@ export default function HomePage() {
       </Section>
 
       <FAQ />
-
-      <Footer /> {/* 👈 cierre con contacto, redes y formas de pago */}
     </>
   );
 }
