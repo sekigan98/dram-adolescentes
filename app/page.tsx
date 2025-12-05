@@ -14,7 +14,7 @@ export default function HomePage() {
 
       <Section
         id="talleres"
-        title="Mis cursos"
+        title="Mis talleres"
         subtitle="Elegí el que mejor se adapte a vos"
       >
         <WorkshopsGrid />
