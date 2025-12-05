@@ -6,6 +6,7 @@ import {
   HiEmojiHappy,
   HiTrendingUp,
   HiUserGroup,
+  HiHeart,
 } from "react-icons/hi";
 
 export const workshops = [
