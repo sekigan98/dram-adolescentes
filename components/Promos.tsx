@@ -1,5 +1,5 @@
 import MotionFade from "./MotionFade";
-import { HiGift, HiUser, HiCollection } from "react-icons/hi"; // 👈 íconos ilustrativos
+import { HiGift, HiUser, HiCollection } from "react-icons/hi";
 
 const promos = [
   {
@@ -10,10 +10,10 @@ const promos = [
     icon: HiCollection,
   },
   {
-    title: "Promo: si llevás 2 te regalo 1",
-    desc: "Con la adquisición de 2 cursos te regalo uno completamente gratis",
+    title: "Promo: llevás 2 y te regalo 1",
+    desc: "Con la adquisición de 2 cursos te regalo uno completamente gratis.",
     waLink:
-      "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%20si%20llevás%202%20te%20regalás%201",
+      "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%20llevás%202%20y%20te%20regalo%201",
     icon: HiGift,
   },
   {
@@ -34,22 +34,20 @@ export default function Promos() {
           <MotionFade key={p.title} delay={i * 0.1}>
             <div className="card p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
               <div>
-                {/* Ícono */}
                 <div className="flex justify-center sm:justify-start mb-4">
                   <Icon className="text-brand-700 text-3xl" />
                 </div>
-                {/* Título y descripción */}
                 <h3>{p.title}</h3>
                 <p className="subtitle mt-2">{p.desc}</p>
               </div>
-              {/* CTA */}
               <a
                 href={p.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Consultar por WhatsApp sobre ${p.title}`}
                 className="btn btn-primary mt-6 w-full"
               >
-                Consultar por WhatsApp
+                Quiero esta promo
               </a>
             </div>
           </MotionFade>
