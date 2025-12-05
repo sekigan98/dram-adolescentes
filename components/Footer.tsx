@@ -9,7 +9,6 @@ export default function Footer() {
     >
       <Container className="py-12">
         <div className="grid gap-10 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-4">
-          {/* Marca */}
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Adolescencia para Padres</h4>
             <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
@@ -17,13 +16,13 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contacto */}
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Contacto</h4>
             <a
               href="https://wa.me/5492236861939"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contactar a Vale por WhatsApp"
               className="mt-2 inline-flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-700 hover:text-brand-700 transition-colors"
             >
               <FaWhatsapp className="text-green-500 text-lg" />
@@ -31,7 +30,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Redes */}
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Redes</h4>
             <div className="mt-2 flex justify-center sm:justify-start gap-4 text-gray-600 text-xl">
@@ -62,23 +60,14 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Créditos */}
           <div>
-            <h4 className="text-lg font-semibold text-brand-800">Landing</h4>
-            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-              Diseñada por{" "}
-              <a
-                href="https://www.linkedin.com/in/tomasromeo/"
-                target="_blank"
-                className="text-brand-700 hover:underline"
-              >
-                Tomás Romeo
-              </a>
+            <h4 className="text-lg font-semibold text-brand-800">Formas de pago</h4>
+            <p className="mt-2 text-sm text-gray-600">
+              Podés abonar mediante PayPal, Western Union o transferencia bancaria.
             </p>
           </div>
         </div>
 
-        {/* Línea final */}
         <div className="mt-12 text-center text-xs text-gray-400">
           © {new Date().getFullYear()} Adolescencia para Padres. Todos los derechos reservados.
         </div>
