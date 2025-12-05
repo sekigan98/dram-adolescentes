@@ -17,7 +17,8 @@ export default function WorkshopPage({ params }: Params) {
 
   return (
     <Section title={w.title} subtitle="Información completa del taller">
-      <Breadcrumb />
+      {/* ⚡ ahora pasamos la prop obligatoria */}
+      <Breadcrumb current={w.title} />
 
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Contenidos del taller */}
