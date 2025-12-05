@@ -32,4 +32,8 @@ export default function FAQ() {
               </div>
             </MotionFade>
           ))}
-        </div
+        </div>
+      </div>
+    </section>
+  );
+}
