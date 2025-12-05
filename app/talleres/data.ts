@@ -177,3 +177,4 @@ export const workshops = [
     icon: HiAcademicCap,
   },
 ];
+
