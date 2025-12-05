@@ -23,7 +23,7 @@ export default function Hero() {
                 href="#talleres"
                 className="btn btn-primary hover:scale-[1.05] transition-transform"
               >
-                🎓 Quiero talleres
+                🎓 Quiero cursos
               </a>
 
               {/* Botón sesiones → WhatsApp directo con mensaje cálido */}
