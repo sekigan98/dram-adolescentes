@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const links = [
     { href: "#sesiones", label: "Sesiones individuales" }, // 👈 ahora apunta al bloque correcto
-    { href: "#talleres", label: "Talleres" },
+    { href: "#talleres", label: "Cursos" },
     { href: "#promos", label: "Promos y packs" },
     { href: "#testimonios", label: "Testimonios" },
     { href: "#faq", label: "Preguntas frecuentes" },
