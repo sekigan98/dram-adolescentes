@@ -59,3 +59,4 @@ export default function WorkshopPage({ params }: Params) {
     </Section>
   );
 }
+
