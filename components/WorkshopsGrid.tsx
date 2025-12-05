@@ -9,8 +9,12 @@ export default function WorkshopsGrid() {
           key={w.slug}
           slug={w.slug}
           title={w.title}
-          short={w.short}   // 👈 ahora cada curso tiene su descripción corta en data.ts
+          short={w.short}
           waLink={w.waLink}
+          contents={w.contents}   // 👈 ahora también pasamos los bullets
+          icon={w.icon}           // 👈 y el ícono definido en data.ts
+          recorded={w.recorded}   // 👈 opcional: si querés mostrar si está grabado
+          highlight={w.highlight} // 👈 opcional: destacar cursos clave
         />
       ))}
     </div>
