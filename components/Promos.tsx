@@ -30,12 +30,18 @@ export default function Promos() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {promos.map((p, i) => {
         const Icon = p.icon;
+        const isPopular = p.title.includes("llevás 2");
         return (
           <MotionFade key={p.title} delay={i * 0.1}>
-            <div className="card p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+            <div className="card relative p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+              {isPopular && (
+                <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
+                  Más elegido
+                </span>
+              )}
               <div>
                 <div className="flex justify-center sm:justify-start mb-4">
-                  <Icon className="text-brand-700 text-3xl" />
+                  <Icon className="text-brand-700 text-3xl" title={p.title} />
                 </div>
                 <h3>{p.title}</h3>
                 <p className="subtitle mt-2">{p.desc}</p>
@@ -47,7 +53,7 @@ export default function Promos() {
                 aria-label={`Consultar por WhatsApp sobre ${p.title}`}
                 className="btn btn-primary mt-6 w-full"
               >
-                Quiero esta promo
+                🎁 Quiero esta promo
               </a>
             </div>
           </MotionFade>
