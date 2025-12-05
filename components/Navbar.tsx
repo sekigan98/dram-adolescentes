@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
     { href: "#sesiones", label: "Sesiones individuales" },
@@ -38,12 +39,23 @@ export default function Navbar() {
       }
     };
 
+    const onScroll = () => setScrolled(window.scrollY > 10);
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow-sm z-50">
+    <nav
+      className={`fixed top-0 left-0 w-full bg-white/80 backdrop-blur z-50 transition-shadow ${
+        scrolled ? "shadow-md" : "shadow-sm"
+      }`}
+    >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <Link
@@ -60,6 +72,8 @@ export default function Navbar() {
             className="sm:hidden btn btn-outline px-3 py-1"
             onClick={() => setOpen(!open)}
             aria-label="Abrir menú"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             ☰
           </button>
@@ -87,17 +101,20 @@ export default function Navbar() {
 
       {/* Menú mobile */}
       {open && (
-        <div className="sm:hidden bg-white border-t shadow-md transition-all duration-300">
+        <div
+          id="mobile-menu"
+          className="sm:hidden bg-white border-t shadow-md transition-all duration-300"
+        >
           <ul className="flex flex-col p-4 gap-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   aria-current={active === l.href ? "page" : undefined}
-                  className={`block py-2 transition-colors ${
+                  className={`block py-2 transition-colors rounded ${
                     active === l.href
                       ? "text-brand-700 font-semibold"
-                      : "hover:text-brand-700"
+                      : "hover:text-brand-700 hover:bg-brand-50"
                   }`}
                   onClick={() => setOpen(false)}
                 >
@@ -111,3 +128,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
