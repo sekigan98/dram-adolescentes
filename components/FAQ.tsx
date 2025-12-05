@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     title: "¿Qué formas de pago aceptan?",
-    desc: "Se puede abonar mediante PayPal, Western Union o transferencia bancaria.",
+    desc: "Podés abonar mediante PayPal, Western Union o transferencia bancaria.",
   },
 ];
 
@@ -32,8 +32,4 @@ export default function FAQ() {
               </div>
             </MotionFade>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+        </div
