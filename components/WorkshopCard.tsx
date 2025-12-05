@@ -19,24 +19,41 @@ export default function WorkshopCard({
   recorded?: boolean;
   highlight?: boolean;
 }) {
+  const titleId = `${slug}-title`;
+  const descId = `${slug}-desc`;
+
   return (
     <MotionFade>
-      <div
-        className={`card p-6 flex flex-col justify-between text-center sm:text-left hover:shadow-lg transition-shadow ${
+      <article
+        aria-labelledby={titleId}
+        aria-describedby={descId}
+        className={`card relative p-6 flex flex-col justify-between text-center sm:text-left hover:shadow-lg hover:scale-[1.02] transition-transform ${
           highlight ? "border-2 border-brand-700" : ""
         }`}
       >
+        {highlight && (
+          <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
+            Destacado
+          </span>
+        )}
+
         <div>
           {/* Ícono */}
           <div className="flex justify-center sm:justify-start mb-4">
-            <Icon className="text-brand-700 text-3xl" />
+            <Icon className="text-brand-700 text-3xl" aria-hidden="true" />
           </div>
 
           {/* Título del curso */}
-          <h3 className="font-semibold text-brand-800">{title}</h3>
+          <header>
+            <h3 id={titleId} className="font-semibold text-brand-800">
+              {title}
+            </h3>
+          </header>
 
           {/* Descripción corta */}
-          <p className="mt-2 text-gray-600">{short}</p>
+          <p id={descId} className="mt-2 text-gray-600">
+            {short}
+          </p>
 
           {/* Bullets */}
           <ul className="mt-4 list-disc list-inside text-gray-600 space-y-1 text-left">
@@ -54,15 +71,18 @@ export default function WorkshopCard({
         </div>
 
         {/* CTA */}
-        <a
-          href={waLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary mt-6 w-full py-2"
-        >
-          Consultar con Vale por WhatsApp
-        </a>
-      </div>
+        <footer>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mt-6 w-full py-2"
+            aria-label={`Consultar por WhatsApp sobre ${title}`}
+          >
+            📲 Consultar con Vale por WhatsApp
+          </a>
+        </footer>
+      </article>
     </MotionFade>
   );
 }
