@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Breadcrumb({ current }: { current?: string }) {
   return (
     <nav className="mb-6 text-sm text-gray-600" aria-label="Breadcrumb">
