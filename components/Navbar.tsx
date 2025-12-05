@@ -7,8 +7,8 @@ export default function Navbar() {
   const [active, setActive] = useState<string>("");
 
   const links = [
-    { href: "#sesiones", label: "Sesiones individuales" }, // 👈 ahora apunta al bloque correcto
-    { href: "#talleres", label: "Cursos" },
+    { href: "#sesiones", label: "Sesiones individuales" },
+    { href: "#talleres", label: "Cursos" }, // 👈 wording consistente
     { href: "#promos", label: "Promos y packs" },
     { href: "#testimonios", label: "Testimonios" },
     { href: "#faq", label: "Preguntas frecuentes" },
@@ -32,7 +32,6 @@ export default function Navbar() {
         }
       });
 
-      // ✅ fallback: si no se encontró nada, marcamos la última sección
       if (!found) {
         const last = links[links.length - 1];
         setActive(last.href);
@@ -47,7 +46,11 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow-sm z-50">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="font-bold text-brand-800 text-lg sm:text-xl">
+        <Link
+          href="/"
+          aria-label="Ir al inicio"
+          className="font-bold text-brand-800 text-lg sm:text-xl"
+        >
           Adolescencia para Padres
         </Link>
 
@@ -68,6 +71,7 @@ export default function Navbar() {
             <li key={l.href} className="relative">
               <a
                 href={l.href}
+                aria-current={active === l.href ? "page" : undefined}
                 className={`transition-colors pb-1 ${
                   active === l.href
                     ? "text-brand-700 font-semibold after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-brand-700 after:rounded-full after:transition-all after:duration-300"
@@ -83,12 +87,13 @@ export default function Navbar() {
 
       {/* Menú mobile */}
       {open && (
-        <div className="sm:hidden bg-white border-t shadow-md">
+        <div className="sm:hidden bg-white border-t shadow-md transition-all duration-300">
           <ul className="flex flex-col p-4 gap-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
+                  aria-current={active === l.href ? "page" : undefined}
                   className={`block py-2 transition-colors ${
                     active === l.href
                       ? "text-brand-700 font-semibold"
