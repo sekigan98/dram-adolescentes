@@ -23,3 +23,4 @@ export default function WorkshopsGrid({ className }: { className?: string }) {
     </section>
   );
 }
+ 
