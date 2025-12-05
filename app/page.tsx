@@ -1,24 +1,24 @@
+"use client";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
-import Benefits from "@/components/Benefits";
 import WorkshopsGrid from "@/components/WorkshopsGrid";
 import Promos from "@/components/Promos";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer"; // 👈 agregado para cerrar el circuito
 
 export default function HomePage() {
   return (
     <>
       <Hero />
 
-
-<Section
-  id="talleres"
-  title="Mis cursos"
-  subtitle="Elegí el que mejor se adapte a vos"
->
-  <WorkshopsGrid />
-</Section>
+      <Section
+        id="talleres"
+        title="Mis cursos"
+        subtitle="Elegí el que mejor se adapte a vos"
+      >
+        <WorkshopsGrid />
+      </Section>
 
       <Section
         id="promos"
@@ -37,7 +37,10 @@ export default function HomePage() {
       </Section>
 
       <FAQ />
+
+      <Footer /> {/* 👈 cierre con contacto, redes y formas de pago */}
     </>
   );
 }
+
 
