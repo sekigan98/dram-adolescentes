@@ -1,4 +1,5 @@
 import MotionFade from "./MotionFade";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WorkshopCard({
   slug,
@@ -71,19 +72,19 @@ export default function WorkshopCard({
         </div>
 
         {/* CTA */}
-        <footer>
+        <footer className="mt-6">
           <a
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary mt-6 w-full py-2"
             aria-label={`Consultar por WhatsApp sobre ${title}`}
+            className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-brand-700 px-4 py-2 text-white text-sm font-medium shadow-md hover:bg-brand-800 transition-all"
           >
-            📲 Consultar con Vale por WhatsApp
+            <FaWhatsapp className="text-lg text-white" />
+            Consultá este curso por WhatsApp
           </a>
         </footer>
       </article>
     </MotionFade>
   );
 }
- 
