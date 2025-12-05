@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -11,6 +11,7 @@ export default function Footer() {
       <Container className="py-12">
         <div className="grid gap-10 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-4">
 
+          {/* Marca */}
           <div>
             <h4 id="footer-title" className="text-lg font-semibold text-brand-800">
               Adolescencia para Padres
@@ -20,7 +21,7 @@ export default function Footer() {
             </p>
           </div>
 
-
+          {/* Contacto */}
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Contacto</h4>
             <a
@@ -35,7 +36,7 @@ export default function Footer() {
             </a>
           </div>
 
-
+          {/* Redes */}
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Redes</h4>
             <div className="mt-2 flex justify-center sm:justify-start gap-4 text-gray-600 text-xl">
@@ -69,16 +70,24 @@ export default function Footer() {
             </div>
           </div>
 
-
-          <div>
-            <h4 className="text-lg font-semibold text-brand-800">Formas de pago</h4>
-            <p className="mt-2 text-sm text-gray-600">
-              Podés abonar mediante PayPal, Western Union o transferencia bancaria.
+          {/* Créditos */}
+          <div className="text-center sm:text-left">
+            <h4 className="text-lg font-semibold text-brand-800">Créditos</h4>
+            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+              Landing diseñada y desarrollada por{" "}
+              <a
+                href="https://www.linkedin.com/in/tomasromeo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-brand-700 hover:text-brand-800 underline transition-colors"
+              >
+                <FaLinkedin className="text-blue-600" /> Tomás Romeo
+              </a>
             </p>
           </div>
         </div>
 
-
+        {/* Copyright */}
         <div className="mt-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-400">
           © {new Date().getFullYear()} Adolescencia para Padres. Todos los derechos reservados.
         </div>
