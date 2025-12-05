@@ -5,16 +5,21 @@ export default function Footer() {
   return (
     <footer
       id="contacto"
+      aria-labelledby="footer-title"
       className="mt-16 bg-gradient-to-br from-brand-50 via-white to-brand-100 border-t border-gray-200 scroll-mt-32"
     >
       <Container className="py-12">
         <div className="grid gap-10 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-4">
+
           <div>
-            <h4 className="text-lg font-semibold text-brand-800">Adolescencia para Padres</h4>
+            <h4 id="footer-title" className="text-lg font-semibold text-brand-800">
+              Adolescencia para Padres
+            </h4>
             <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
-              Cursos online en video para acompañar a tus hijos adolescentes con herramientas efectivas.
+              Acompañá a tu hijo adolescente con cursos online diseñados para padres como vos.
             </p>
           </div>
+
 
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Contacto</h4>
@@ -25,10 +30,11 @@ export default function Footer() {
               aria-label="Contactar a Vale por WhatsApp"
               className="mt-2 inline-flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-700 hover:text-brand-700 transition-colors"
             >
-              <FaWhatsapp className="text-green-500 text-lg" />
+              <FaWhatsapp className="text-green-500 text-lg" title="WhatsApp" />
               Hablá con Vale por WhatsApp
             </a>
           </div>
+
 
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Redes</h4>
@@ -36,29 +42,33 @@ export default function Footer() {
               <a
                 href="https://web.facebook.com/valeria.merino.1"
                 target="_blank"
-                className="hover:text-blue-600 transition-colors"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors hover:scale-110 transform"
                 aria-label="Facebook"
               >
-                <FaFacebook />
+                <FaFacebook title="Facebook" />
               </a>
               <a
                 href="https://www.instagram.com/adolescenciaparapadres/"
                 target="_blank"
-                className="hover:text-pink-500 transition-colors"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition-colors hover:scale-110 transform"
                 aria-label="Instagram"
               >
-                <FaInstagram />
+                <FaInstagram title="Instagram" />
               </a>
               <a
                 href="https://www.tiktok.com/@valemerino.ar"
                 target="_blank"
-                className="hover:text-black transition-colors"
+                rel="noopener noreferrer"
+                className="hover:text-black transition-colors hover:scale-110 transform"
                 aria-label="TikTok"
               >
-                <FaTiktok />
+                <FaTiktok title="TikTok" />
               </a>
             </div>
           </div>
+
 
           <div>
             <h4 className="text-lg font-semibold text-brand-800">Formas de pago</h4>
@@ -68,12 +78,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 text-center text-xs text-gray-400">
+
+        <div className="mt-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-400">
           © {new Date().getFullYear()} Adolescencia para Padres. Todos los derechos reservados.
         </div>
       </Container>
     </footer>
   );
 }
-
-
