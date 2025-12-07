@@ -20,9 +20,7 @@ export default function HomePage() {
         subtitle="Elegí el que mejor se adapte a vos"
         className="text-center"
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          <WorkshopsGrid />
-        </div>
+        <WorkshopsGrid />
       </Section>
 
       {/* Promos */}
@@ -32,9 +30,7 @@ export default function HomePage() {
         subtitle="Aprovechá las ofertas especiales"
         className="text-center"
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          <Promos />
-        </div>
+        <Promos />
       </Section>
 
       {/* Testimonios */}
@@ -44,13 +40,15 @@ export default function HomePage() {
         subtitle="Lo que dicen otros padres"
         className="text-center"
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          <Testimonials />
-        </div>
+        <Testimonials />
       </Section>
 
       {/* Preguntas frecuentes */}
       <FAQ />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
+
