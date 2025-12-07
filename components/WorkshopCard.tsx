@@ -46,7 +46,7 @@ export default function WorkshopCard({
 
           {/* Título del curso */}
           <header>
-            <h3 id={titleId} className="font-semibold text-brand-800">
+            <h3 id={titleId} className="text-blue-700 font-bold text-lg">
               {title}
             </h3>
           </header>
@@ -78,13 +78,14 @@ export default function WorkshopCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Consultar por WhatsApp sobre ${title}`}
-            className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-brand-700 px-4 py-2 text-white text-sm font-medium shadow-md hover:bg-brand-800 transition-all"
+            className="inline-flex items-center justify-center gap-2 w-full rounded bg-green-500 px-3 py-2 text-white text-sm font-medium shadow-md hover:bg-green-600 transition-all"
           >
-            <FaWhatsapp className="text-lg text-white" />
-            Consultá este curso por WhatsApp
+            <FaWhatsapp className="text-lg text-white" aria-hidden="true" />
+            Consultar por WhatsApp
           </a>
         </footer>
       </article>
     </MotionFade>
   );
 }
+
