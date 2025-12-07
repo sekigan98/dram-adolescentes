@@ -26,22 +26,22 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div
-      className="grid sm:grid-cols-2 gap-8"
+      className="grid sm:grid-cols-2 gap-8 justify-items-center"
       aria-labelledby="testimonios-title"
     >
       {testimonials.map((t, i) => (
         <MotionFade key={t.name} delay={i * 0.1}>
-          <figure className="card p-6 text-center sm:text-left hover:shadow-lg hover:scale-[1.02] transition-transform">
+          <figure className="card p-6 max-w-md text-center hover:shadow-lg hover:scale-[1.02] transition-transform">
             <img
               src={t.img}
               alt={`Foto de ${t.name}, ${t.role}`}
               loading="lazy"
-              className="mx-auto sm:mx-0 h-20 w-20 rounded-full object-cover ring-2 ring-brand-300 shadow-md"
+              className="mx-auto h-20 w-20 rounded-full object-cover ring-2 ring-brand-300 shadow-md"
             />
-            <blockquote className="subtitle mt-4 italic text-gray-700 leading-relaxed whitespace-pre-line">
+            <blockquote className="subtitle mt-4 italic text-gray-700 leading-relaxed whitespace-pre-line text-center">
               “{t.text}”
             </blockquote>
-            <figcaption className="mt-3 text-blue-700 font-bold">
+            <figcaption className="mt-3 text-blue-700 font-bold text-center">
               {t.name}
               {t.role && (
                 <span className="block text-sm text-gray-500 font-normal">{t.role}</span>
@@ -53,3 +53,4 @@ export default function Testimonials() {
     </div>
   );
 }
+
