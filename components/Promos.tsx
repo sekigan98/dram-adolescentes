@@ -26,7 +26,7 @@ export default function Promos() {
         const isPopular = p.title.includes("llevás 2");
         return (
           <MotionFade key={p.title} delay={i * 0.1}>
-            <div className="card relative p-6 flex flex-col justify-between max-w-md text-center min-h-[320px] hover:shadow-lg hover:scale-[1.02] transition-transform">
+            <div className="card relative p-6 flex flex-col justify-between max-w-sm text-center hover:shadow-lg hover:scale-[1.02] transition-transform">
               {isPopular && (
                 <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
                   Más elegido
