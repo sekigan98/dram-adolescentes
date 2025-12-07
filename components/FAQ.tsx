@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     title: "¿Cómo se accede a los cursos?",
-    desc: "Recibís acceso por WhatsApp de Vale, con link y materiales listos para usar.",
+    desc: "Recibís acceso por el WhatsApp de Vale, con link y materiales listos para usar.",
   },
   {
     title: "¿Qué formas de pago aceptan?",
