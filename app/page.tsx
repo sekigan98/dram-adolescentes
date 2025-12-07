@@ -45,9 +45,6 @@ export default function HomePage() {
 
       {/* Preguntas frecuentes */}
       <FAQ />
-
-      {/* Footer */}
-      <Footer />
     </>
   );
 }
