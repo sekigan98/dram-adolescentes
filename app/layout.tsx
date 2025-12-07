@@ -48,12 +48,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" dir="ltr">
-      <body className="pt-16 bg-[var(--bg)] text-[var(--text)] antialiased leading-relaxed">
+      <body className="bg-[var(--bg)] text-[var(--text)] antialiased leading-relaxed">
+        {/* Navbar fijo arriba */}
         <Navbar />
-        <main>{children}</main>
+
+        {/* Contenido principal */}
+        <main className="pt-16">{children}</main>
+
+        {/* Footer */}
         <Footer />
+
+        {/* Botón flotante de WhatsApp */}
         <WhatsAppButton />
       </body>
     </html>
   );
 }
+
