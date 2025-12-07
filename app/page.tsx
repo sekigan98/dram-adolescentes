@@ -10,8 +10,10 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <>
+      {/* Hero principal */}
       <Hero />
 
+      {/* Cursos */}
       <Section
         id="talleres"
         title="Mis cursos"
@@ -23,6 +25,7 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Promos */}
       <Section
         id="promos"
         title="Promos y packs"
@@ -34,6 +37,7 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Testimonios */}
       <Section
         id="testimonios"
         title="Testimonios"
@@ -45,8 +49,10 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <FAQ className="text-center" />
+      {/* Preguntas frecuentes */}
+      <FAQ />
 
+      {/* Footer */}
       <Footer />
     </>
   );
