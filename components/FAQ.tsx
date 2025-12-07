@@ -26,7 +26,7 @@ export default function FAQ() {
         <h2 id="faq-title" className="text-blue-700 font-bold text-2xl">
           Preguntas frecuentes
         </h2>
-        <p className="subtitle mt-2 mb-10 max-w-prose mx-auto text-gray-600">
+        <p className="subtitle mt-2 mb-10 max-w-prose mx-auto text-gray-600 text-lg">
           Respondemos las dudas más comunes antes de inscribirte, para que te sientas seguro al elegir.
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
@@ -36,6 +36,7 @@ export default function FAQ() {
                 className="card p-6 text-center hover:shadow-lg transition-shadow max-w-sm"
                 role="group"
                 aria-labelledby={`faq-${i}-title`}
+                aria-describedby={`faq-${i}-desc`}
               >
                 <h3
                   id={`faq-${i}-title`}
@@ -43,7 +44,9 @@ export default function FAQ() {
                 >
                   {f.title}
                 </h3>
-                <p className="mt-2 text-gray-600">{f.desc}</p>
+                <p id={`faq-${i}-desc`} className="mt-2 text-gray-600">
+                  {f.desc}
+                </p>
               </article>
             </MotionFade>
           ))}
