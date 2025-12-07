@@ -22,10 +22,12 @@ export default function Section({
       className={`section-y ${id ? "scroll-mt-32" : ""} ${className ?? ""}`}
     >
       <Container>
-        <header className="mb-10 text-center sm:text-left">
-          <h2 id={titleId}>{title}</h2>
+        <header className="mb-10 text-center">
+          <h2 id={titleId} className="text-blue-700 font-bold text-2xl">
+            {title}
+          </h2>
           {subtitle && (
-            <p className="subtitle mt-2 max-w-prose mx-auto sm:mx-0">
+            <p className="subtitle mt-2 max-w-prose mx-auto text-gray-600">
               {subtitle}
             </p>
           )}
