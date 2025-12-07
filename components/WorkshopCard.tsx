@@ -30,7 +30,7 @@ export default function WorkshopCard({
       <article
         aria-labelledby={titleId}
         aria-describedby={descId}
-        className={`card relative p-6 flex flex-col justify-between min-h-[460px] hover:shadow-lg hover:scale-[1.02] transition-transform ${
+        className={`card relative p-6 flex flex-col justify-between max-w-sm text-center hover:shadow-lg hover:scale-[1.02] transition-transform ${
           highlight ? "border-2 border-brand-700" : ""
         } ${className ?? ""}`}
       >
@@ -47,14 +47,14 @@ export default function WorkshopCard({
           </div>
 
           {/* Título del curso */}
-          <header className="text-center">
+          <header>
             <h3 id={titleId} className="text-blue-700 font-bold text-lg">
               {title}
             </h3>
           </header>
 
           {/* Descripción corta */}
-          <p id={descId} className="mt-2 text-gray-600 text-center">
+          <p id={descId} className="mt-2 text-gray-600">
             {short}
           </p>
 
@@ -74,7 +74,7 @@ export default function WorkshopCard({
         </div>
 
         {/* CTA */}
-        <footer className="mt-6 text-center">
+        <footer className="mt-6">
           <a
             href={waLink}
             target="_blank"
@@ -90,4 +90,3 @@ export default function WorkshopCard({
     </MotionFade>
   );
 }
-
