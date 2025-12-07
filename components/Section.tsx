@@ -1,18 +1,20 @@
 import Container from "./Container";
 
+interface SectionProps {
+  id?: string;
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
 export default function Section({
   id,
   title,
   subtitle,
   children,
   className,
-}: {
-  id?: string;
-  title: string;
-  subtitle?: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
+}: SectionProps) {
   const titleId = id ? `${id}-title` : undefined;
 
   return (
@@ -27,7 +29,7 @@ export default function Section({
             {title}
           </h2>
           {subtitle && (
-            <p className="subtitle mt-2 max-w-prose mx-auto text-gray-600">
+            <p className="subtitle mt-2 max-w-prose mx-auto text-gray-600 text-lg">
               {subtitle}
             </p>
           )}
@@ -37,4 +39,3 @@ export default function Section({
     </section>
   );
 }
-
