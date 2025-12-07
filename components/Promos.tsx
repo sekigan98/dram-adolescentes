@@ -1,5 +1,5 @@
 import MotionFade from "./MotionFade";
-import { HiGift, HiUser, HiCollection } from "react-icons/hi";
+import { HiGift, HiCollection } from "react-icons/hi";
 
 const promos = [
   {
@@ -16,13 +16,6 @@ const promos = [
       "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%20llevás%202%20y%20te%20regalo%201",
     icon: HiGift,
   },
-  {
-    title: "Sesión individual",
-    desc: "Agendá una sesión personalizada para trabajar tus dudas específicas con Vale.",
-    waLink:
-      "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20agendar%20una%20sesión%20individual",
-    icon: HiUser,
-  },
 ];
 
 export default function Promos() {
@@ -33,7 +26,7 @@ export default function Promos() {
         const isPopular = p.title.includes("llevás 2");
         return (
           <MotionFade key={p.title} delay={i * 0.1}>
-            <div className="card relative p-6 flex flex-col justify-between hover:shadow-lg transition-shadow">
+            <div className="card relative p-6 flex flex-col justify-between hover:shadow-lg hover:scale-[1.02] transition-transform">
               {isPopular && (
                 <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
                   Más elegido
@@ -41,19 +34,19 @@ export default function Promos() {
               )}
               <div>
                 <div className="flex justify-center sm:justify-start mb-4">
-                  <Icon className="text-brand-700 text-3xl" title={p.title} />
+                  <Icon className="text-brand-700 text-3xl" aria-hidden="true" />
                 </div>
-                <h3>{p.title}</h3>
-                <p className="subtitle mt-2">{p.desc}</p>
+                <h3 className="text-blue-700 font-bold text-lg">{p.title}</h3>
+                <p className="subtitle mt-2 text-gray-600">{p.desc}</p>
               </div>
               <a
                 href={p.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Consultar por WhatsApp sobre ${p.title}`}
-                className="btn btn-primary mt-6 w-full"
+                className="mt-6 inline-block bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-2 rounded shadow w-full text-center transition-colors"
               >
-                🎁 Quiero esta promo
+                Consultar por WhatsApp
               </a>
             </div>
           </MotionFade>
@@ -62,3 +55,4 @@ export default function Promos() {
     </div>
   );
 }
+
