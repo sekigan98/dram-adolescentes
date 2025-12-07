@@ -11,19 +11,19 @@ export default function Hero() {
       <div className="container grid gap-12 md:grid-cols-2 items-center">
         {/* Texto */}
         <MotionFade>
-          <div>
+          <div className="text-center">
             <h1
               id="hero-title"
-              className="text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-900 text-center sm:text-left leading-tight"
+              className="text-3xl sm:text-4xl lg:text-6xl font-bold text-brand-900 leading-tight"
             >
               Acompañá a tu hijo adolescente con herramientas efectivas
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-700 text-center sm:text-left max-w-lg">
+            <p className="mt-6 text-lg sm:text-xl text-gray-700 max-w-lg mx-auto">
               Con mis <strong>cursos online para padres</strong> y sesiones individuales vas a aprender
               herramientas para dejar de padecer la adolescencia de tu hijo y empezar a disfrutarla.
               Comprobado personalmente con mis 4 hijos y las cientos de familias que acompañé.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4 justify-center sm:justify-start">
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <a
                 href="#talleres"
                 aria-label="Ver cursos disponibles"
@@ -46,7 +46,7 @@ export default function Hero() {
 
         {/* Video propio */}
         <MotionFade delay={0.2}>
-          <div className="video-wrapper card mx-auto shadow-lg rounded-2xl overflow-hidden">
+          <div className="video-wrapper card mx-auto shadow-lg rounded-2xl overflow-hidden max-w-lg">
             <video
               src="/videos/hero.mp4"
               autoPlay
@@ -65,4 +65,4 @@ export default function Hero() {
     </section>
   );
 }
- 
+
