@@ -2,29 +2,31 @@ import MotionFade from "./MotionFade";
 
 const testimonials = [
   {
-    name: "María",
-    role: "Madre",
-    text: "Me ayudó a comunicarme mejor con mi hijo adolescente.",
-    img: "/images/testimonial-1.jpg",
+    name: "Laura",
+    role: "Mamá de Jere (15 años)",
+    text: `Llegué a Vale en busca de herramientas, porque el estudio de mi hijo era un tema de continuas peleas con él. 
+    Gracias a su curso de técnicas de estudio y las sesiones, todo mejoró mucho. 
+    De 8 materias bajas, terminó rindiendo 2 a fin de año y bien. 
+    Es el primer verano que lo vamos a pasar tranquilos y vamos a poder irnos de vacaciones en familia. 
+    Vale nos cambió la dinámica familiar para bien. ¡Mil gracias!`,
+    img: "/images/testimonial-laura.jpg",
   },
   {
-    name: "Carlos",
-    role: "Padre",
-    text: "Aprendí a poner límites sin pelearme.",
-    img: "/images/testimonial-2.jpg",
-  },
-  {
-    name: "Lucía",
-    role: "Madre",
-    text: "Los cursos me dieron herramientas prácticas para el día a día.",
-    img: "/images/testimonial-3.jpg",
+    name: "Cecilia",
+    role: "Mamá de Lucas (15 años, Tucumán)",
+    text: `Gracias a Valeria y a las sesiones que tuvimos pude encontrar el camino para comunicarme con mi hijo. 
+    Cambié mis formas y el cambio también llegó en él. 
+    Hoy puedo decir que Vale me guió hasta donde estoy hoy. 
+    Estaba sin saber qué hacer y sintiéndome mala madre, era duro pero era lo que sentía. 
+    Ahora me siento acompañada y con herramientas.`,
+    img: "/images/testimonial-cecilia.jpg",
   },
 ];
 
 export default function Testimonials() {
   return (
     <div
-      className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      className="grid sm:grid-cols-2 gap-8"
       aria-labelledby="testimonios-title"
     >
       {testimonials.map((t, i) => (
@@ -36,8 +38,10 @@ export default function Testimonials() {
               loading="lazy"
               className="mx-auto sm:mx-0 h-20 w-20 rounded-full object-cover ring-2 ring-brand-300 shadow-md"
             />
-            <blockquote className="subtitle mt-4 italic text-gray-700">“{t.text}”</blockquote>
-            <figcaption className="mt-3 text-brand-700 font-semibold">
+            <blockquote className="subtitle mt-4 italic text-gray-700 leading-relaxed whitespace-pre-line">
+              “{t.text}”
+            </blockquote>
+            <figcaption className="mt-3 text-blue-700 font-bold">
               {t.name}
               {t.role && (
                 <span className="block text-sm text-gray-500 font-normal">{t.role}</span>
