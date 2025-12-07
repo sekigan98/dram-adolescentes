@@ -5,8 +5,9 @@ interface MotionFadeProps {
   children: React.ReactNode;
   delay?: number;
   duration?: number;
-  ease?: string;
+  ease?: "easeIn" | "easeOut" | "easeInOut" | string;
   direction?: "up" | "down" | "left" | "right";
+  offset?: number;
 }
 
 export default function MotionFade({
@@ -15,8 +16,8 @@ export default function MotionFade({
   duration = 0.6,
   ease = "easeOut",
   direction = "up",
+  offset = 8,
 }: MotionFadeProps) {
-  const offset = 8; // desplazamiento base
   const initial = {
     opacity: 0,
     y: direction === "up" ? offset : direction === "down" ? -offset : 0,
