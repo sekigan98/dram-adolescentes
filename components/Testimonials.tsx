@@ -21,17 +21,30 @@ const testimonials = [
     Ahora me siento acompañada y con herramientas.`,
     img: "/images/testimonial-cecilia.jpg",
   },
+  {
+    name: "Marcela",
+    role: "Mamá de 2 adolescentes (New Jersey, EEUU)",
+    text: `Me ayudó a entender y reaccionar diferente ante las dificultades que se presentan con mis adolescentes. 
+    Comprendí que 2 min son suficientes para expresarme. 
+    Ser más tolerante cuando no están decididos porque les cuesta más tiempo procesar la información, comprender su agotamiento ya que es un complejo proceso el crecer. 
+    Debo acompañar de lejos escuchando, haciendo preguntas abiertas para ayudarlos de manera más eficaz. 
+    La paciencia la adquiero con voluntad, también poniendo límites claros y consecuencias anticipadas cortas en ese momento. 
+    Mi casa, con todo aquello que aprendí, ya no es un campo de batalla ni un ring donde debe salir un ganador. 
+    Mi accionar es más consciente de lo que necesitan ellos, trabajo todos los días en ese desafío. 
+    Lo importante es que las herramientas adquiridas con Vale hacen la diferencia en la vida de mis hijos y en la mía.`,
+    img: "/images/testimonial-marcela.jpg", // 👉 agrega la foto si la tenés
+  },
 ];
 
 export default function Testimonials() {
   return (
     <div
-      className="grid sm:grid-cols-2 gap-8 justify-items-center items-start"
+      className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-start"
       aria-labelledby="testimonios-title"
     >
       {testimonials.map((t, i) => (
         <MotionFade key={t.name} delay={i * 0.1}>
-          <figure className="card p-6 max-w-md text-center min-h-[420px] flex flex-col justify-between hover:shadow-lg hover:scale-[1.02] transition-transform">
+          <figure className="card p-6 max-w-sm text-center flex flex-col justify-between hover:shadow-lg hover:scale-[1.02] transition-transform">
             <img
               src={t.img}
               alt={`Foto de ${t.name}, ${t.role}`}
@@ -53,4 +66,6 @@ export default function Testimonials() {
     </div>
   );
 }
+
+
 
