@@ -5,7 +5,7 @@ import WorkshopsGrid from "@/components/WorkshopsGrid";
 import Promos from "@/components/Promos";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer"; // 👈 agregado para cerrar el circuito
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -16,30 +16,38 @@ export default function HomePage() {
         id="talleres"
         title="Mis cursos"
         subtitle="Elegí el que mejor se adapte a vos"
+        className="text-center"
       >
-        <WorkshopsGrid />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <WorkshopsGrid />
+        </div>
       </Section>
 
       <Section
         id="promos"
         title="Promos y packs"
         subtitle="Aprovechá las ofertas especiales"
+        className="text-center"
       >
-        <Promos />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <Promos />
+        </div>
       </Section>
 
       <Section
         id="testimonios"
         title="Testimonios"
         subtitle="Lo que dicen otros padres"
+        className="text-center"
       >
-        <Testimonials />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <Testimonials />
+        </div>
       </Section>
 
-      <FAQ />
+      <FAQ className="text-center" />
+
+      <Footer />
     </>
   );
 }
-
-
- 
