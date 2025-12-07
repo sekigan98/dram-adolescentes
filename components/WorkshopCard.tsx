@@ -10,7 +10,7 @@ export default function WorkshopCard({
   icon: Icon,
   recorded,
   highlight,
-  className, // 👈 nuevo
+  className,
 }: {
   slug: string;
   title: string;
@@ -20,7 +20,7 @@ export default function WorkshopCard({
   icon: React.ElementType;
   recorded?: boolean;
   highlight?: boolean;
-  className?: string; // 👈 tipado
+  className?: string;
 }) {
   const titleId = `${slug}-title`;
   const descId = `${slug}-desc`;
@@ -30,9 +30,9 @@ export default function WorkshopCard({
       <article
         aria-labelledby={titleId}
         aria-describedby={descId}
-        className={`card relative p-6 flex flex-col justify-between hover:shadow-lg hover:scale-[1.02] transition-transform ${
+        className={`card relative p-6 flex flex-col justify-between min-h-[460px] hover:shadow-lg hover:scale-[1.02] transition-transform ${
           highlight ? "border-2 border-brand-700" : ""
-        } ${className ?? ""}`} // 👈 se aplica si existe
+        } ${className ?? ""}`}
       >
         {highlight && (
           <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
