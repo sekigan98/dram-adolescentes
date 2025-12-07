@@ -42,13 +42,24 @@ body {
 .section-y {
   @apply py-12 sm:py-16 lg:py-20;
 }
+.section-y-compact {
+  @apply py-8 sm:py-12;
+}
 
-/* Tarjetas */
+/* Tarjetas base */
 .card {
   @apply rounded-2xl bg-white/90 backdrop-blur shadow-md ring-1 ring-gray-200 transition-transform duration-200;
 }
 .card:hover {
   @apply scale-[1.02] shadow-lg;
+}
+
+/* Variantes de card */
+.card-compact {
+  @apply card max-w-sm p-6 text-center;
+}
+.card-wide {
+  @apply card max-w-md p-6 flex flex-col justify-between text-center;
 }
 
 /* Botones */
@@ -90,6 +101,9 @@ body {
 /* Ajustes para grids y responsive */
 .grid-responsive {
   @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+.grid-compact {
+  @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
 }
 
 /* Video embebido con proporción fija */
