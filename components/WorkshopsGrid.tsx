@@ -5,7 +5,7 @@ export default function WorkshopsGrid({ className }: { className?: string }) {
   return (
     <section
       aria-labelledby="talleres-title"
-      className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center ${className ?? ""}`}
+      className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-start ${className ?? ""}`}
     >
       {workshops.map((w) => (
         <WorkshopCard
@@ -18,10 +18,9 @@ export default function WorkshopsGrid({ className }: { className?: string }) {
           icon={w.icon}
           recorded={w.recorded}
           highlight={w.highlight}
-          className="max-w-md text-center" // 👈 cada card centrada y con ancho controlado
+          className="max-w-md text-center min-h-[460px] flex flex-col justify-between"
         />
       ))}
     </section>
   );
 }
-
