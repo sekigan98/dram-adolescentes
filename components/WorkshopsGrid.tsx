@@ -4,13 +4,14 @@ import WorkshopCard from "./WorkshopCard";
 export default function WorkshopsGrid({ className }: { className?: string }) {
   return (
     <section
+      id="talleres" // 👈 id general para la sección completa
       aria-labelledby="talleres-title"
       className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-start ${className ?? ""}`}
     >
       {workshops.map((w) => (
         <WorkshopCard
           key={w.slug}
-          slug={w.slug}
+          slug={w.slug} // 👈 cada card recibe su slug
           title={w.title}
           short={w.short}
           waLink={w.waLink}
