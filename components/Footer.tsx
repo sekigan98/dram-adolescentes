@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -70,21 +70,22 @@ export default function Footer() {
             </div>
           </div>
 
-  {/* Créditos */}
-<div className="text-center sm:text-left">
-  <h4 className="text-lg font-semibold text-brand-800">Créditos</h4>
-  <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-    Landing diseñada y desarrollada por{" "}
-    <a
-      href="https://www.instagram.com/bytesavermdp/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-brand-700 hover:text-brand-800 underline transition-colors"
-    >
-      <FaInstagram className="text-pink-500" /> Tomás Romeo
-    </a>
-  </p>
-</div>
+          {/* Créditos */}
+          <div className="text-center sm:text-left">
+            <h4 className="text-lg font-semibold text-brand-800">Créditos</h4>
+            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+              Landing diseñada y desarrollada por{" "}
+              <a
+                href="https://www.instagram.com/bytesavermdp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-brand-700 hover:text-brand-800 underline transition-colors"
+              >
+                <FaInstagram className="text-pink-500" /> Tomás Romeo
+              </a>
+            </p>
+          </div>
+        </div>
 
         {/* Copyright */}
         <div className="mt-12 border-t border-gray-200 pt-6 text-center text-xs text-gray-400">
