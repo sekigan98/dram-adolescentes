@@ -89,7 +89,7 @@ export default function Navbar() {
                   onMouseEnter={() => setCoursesOpen(true)}
                   onMouseLeave={() => setCoursesOpen(false)}
                 >
-                  {/* 👉 Convertimos en botón toggle, no link */}
+                  {/* 👉 Botón toggle en desktop */}
                   <button
                     type="button"
                     onClick={() => setCoursesOpen(!coursesOpen)}
@@ -200,4 +200,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
