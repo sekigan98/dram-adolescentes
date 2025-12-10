@@ -18,7 +18,7 @@ export default function WorkshopsGrid({ className }: { className?: string }) {
           icon={w.icon}
           recorded={w.recorded}
           highlight={w.highlight}
-          className="max-w-md text-center min-h-[460px] flex flex-col justify-between"
+          className="max-w-sm text-center flex flex-col justify-between"
         />
       ))}
     </section>
