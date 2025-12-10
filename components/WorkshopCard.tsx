@@ -19,6 +19,7 @@ export default function WorkshopCard({
   return (
     <MotionFade>
       <article
+        id={slug} // 👈 ahora cada card tiene su id para el submenú del Navbar
         aria-labelledby={titleId}
         aria-describedby={descId}
         className={`card relative p-6 flex flex-col justify-between max-w-sm text-center hover:shadow-lg hover:scale-[1.02] transition-transform ${
@@ -81,4 +82,3 @@ export default function WorkshopCard({
     </MotionFade>
   );
 }
-
