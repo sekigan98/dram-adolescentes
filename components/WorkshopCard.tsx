@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { workshops } from "@/data/workshops"; // importa tu array completo
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -15,12 +16,6 @@ export default function Navbar() {
     { href: "#testimonios", label: "Testimonios" },
     { href: "#faq", label: "Preguntas frecuentes" },
     { href: "#contacto", label: "Contacto" },
-  ];
-
-  const courses = [
-    { href: "#curso-comunicacion", label: "Comunicación efectiva" },
-    { href: "#curso-limites", label: "Límites claros" },
-    { href: "#curso-autoestima", label: "Autoestima y motivación" },
   ];
 
   useEffect(() => {
@@ -93,10 +88,13 @@ export default function Navbar() {
                   className="cursor-pointer"
                   onMouseEnter={() => setCoursesOpen(true)}
                   onMouseLeave={() => setCoursesOpen(false)}
+                  onClick={() => setCoursesOpen(!coursesOpen)}
                 >
                   <a
                     href={l.href}
                     aria-current={active === l.href ? "page" : undefined}
+                    aria-expanded={coursesOpen}
+                    aria-controls="submenu-cursos"
                     className={`transition-colors pb-1 ${
                       active === l.href
                         ? "text-brand-700 font-semibold"
@@ -106,14 +104,17 @@ export default function Navbar() {
                     {l.label}
                   </a>
                   {coursesOpen && (
-                    <ul className="absolute left-0 mt-2 bg-white rounded shadow-md ring-1 ring-gray-200 w-48">
-                      {courses.map((c) => (
-                        <li key={c.href}>
+                    <ul
+                      id="submenu-cursos"
+                      className="absolute left-0 mt-2 bg-white rounded shadow-md ring-1 ring-gray-200 w-64"
+                    >
+                      {workshops.map((w) => (
+                        <li key={w.slug}>
                           <a
-                            href={c.href}
+                            href={`#${w.slug}`}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700"
                           >
-                            {c.label}
+                            {w.title}
                           </a>
                         </li>
                       ))}
@@ -127,53 +128,4 @@ export default function Navbar() {
                   className={`transition-colors pb-1 ${
                     active === l.href
                       ? "text-brand-700 font-semibold after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-brand-700 after:rounded-full"
-                      : "hover:text-brand-700"
-                  }`}
-                >
-                  {l.label}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
 
-      {/* Menú mobile */}
-      {open && (
-        <div
-          id="mobile-menu"
-          className="sm:hidden bg-white border-t shadow-md transition-all duration-300"
-        >
-          <ul className="flex flex-col p-4 gap-3">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="block py-2 transition-colors rounded hover:text-brand-700 hover:bg-brand-50"
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </a>
-                {l.label === "Cursos" && (
-                  <ul className="ml-4 mt-2 flex flex-col gap-2">
-                    {courses.map((c) => (
-                      <li key={c.href}>
-                        <a
-                          href={c.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-brand-700"
-                          onClick={() => setOpen(false)}
-                        >
-                          {c.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
-}
