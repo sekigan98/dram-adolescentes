@@ -88,11 +88,11 @@ export default function Navbar() {
                   className="cursor-pointer"
                   onMouseEnter={() => setCoursesOpen(true)}
                   onMouseLeave={() => setCoursesOpen(false)}
-                  onClick={() => setCoursesOpen(!coursesOpen)}
                 >
-                  <a
-                    href={l.href}
-                    aria-current={active === l.href ? "page" : undefined}
+                  {/* 👉 Convertimos en botón toggle, no link */}
+                  <button
+                    type="button"
+                    onClick={() => setCoursesOpen(!coursesOpen)}
                     aria-expanded={coursesOpen}
                     aria-controls="submenu-cursos"
                     className={`transition-colors pb-1 ${
@@ -102,7 +102,7 @@ export default function Navbar() {
                     }`}
                   >
                     {l.label}
-                  </a>
+                  </button>
                   {coursesOpen && (
                     <ul
                       id="submenu-cursos"
@@ -148,32 +148,49 @@ export default function Navbar() {
           <ul className="flex flex-col p-4 gap-3">
             {links.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
-                  aria-current={active === l.href ? "page" : undefined}
-                  className={`block py-2 transition-colors rounded ${
-                    active === l.href
-                      ? "text-brand-700 font-semibold"
-                      : "hover:text-brand-700 hover:bg-brand-50"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </a>
-                {l.label === "Cursos" && (
-                  <ul className="ml-4 mt-2 flex flex-col gap-2">
-                    {workshops.map((w) => (
-                      <li key={w.slug}>
-                        <a
-                          href={`#${w.slug}`}
-                          className="block py-1 text-sm text-gray-600 hover:text-brand-700"
-                          onClick={() => setOpen(false)}
-                        >
-                          {w.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                {l.label === "Cursos" ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setCoursesOpen(!coursesOpen)}
+                      aria-expanded={coursesOpen}
+                      aria-controls="submenu-cursos-mobile"
+                      className="block py-2 transition-colors rounded hover:text-brand-700 hover:bg-brand-50"
+                    >
+                      {l.label}
+                    </button>
+                    {coursesOpen && (
+                      <ul
+                        id="submenu-cursos-mobile"
+                        className="ml-4 mt-2 flex flex-col gap-2"
+                      >
+                        {workshops.map((w) => (
+                          <li key={w.slug}>
+                            <a
+                              href={`#${w.slug}`}
+                              className="block py-1 text-sm text-gray-600 hover:text-brand-700"
+                              onClick={() => setOpen(false)}
+                            >
+                              {w.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <a
+                    href={l.href}
+                    aria-current={active === l.href ? "page" : undefined}
+                    className={`block py-2 transition-colors rounded ${
+                      active === l.href
+                        ? "text-brand-700 font-semibold"
+                        : "hover:text-brand-700 hover:bg-brand-50"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                  </a>
                 )}
               </li>
             ))}
@@ -183,5 +200,4 @@ export default function Navbar() {
     </nav>
   );
 }
-
 
