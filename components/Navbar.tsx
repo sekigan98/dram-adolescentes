@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: "#sesiones", label: "Sesiones individuales" },
     { href: "#talleres", label: "Cursos" }, // tendrá submenú
     { href: "#promos", label: "Promos y packs" },
+    { href: "#coaching", label: "Coaching 8 semanas" },
     { href: "#testimonios", label: "Testimonios" },
     { href: "#faq", label: "Preguntas frecuentes" },
     { href: "#contacto", label: "Contacto" },
