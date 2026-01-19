@@ -36,7 +36,7 @@ export default function Hero() {
                     <a
                 href="#coaching"
                 aria-label="Ir al programa de coaching de 8 semanas"
-                className="btn btn-outline hover:scale-[1.05] transition-transform"
+                className="btn btn-primary hover:scale-[1.05] transition-transform"
               >
                 🌟 Coaching 8 semanas
               </a>
