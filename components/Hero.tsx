@@ -21,7 +21,6 @@ export default function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-gray-700 max-w-lg mx-auto">
               Con mis <strong>cursos online para padres</strong> y sesiones individuales vas a aprender
               herramientas para dejar de padecer la adolescencia de tu hijo y empezar a disfrutarla.
-              Comprobado personalmente con mis 4 hijos y las cientos de familias que acompañé.
               En 2025, <strong>más de 300 madres y padres volvieron a conectar con sus hijos</strong> gracias a mis cursos y
               sesiones individuales. Si querés ser la próxima familia, escribime.
             </p>
