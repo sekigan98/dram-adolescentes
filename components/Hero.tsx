@@ -19,10 +19,10 @@ export default function Hero() {
               Acompañá a tu hijo adolescente con herramientas efectivas
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-700 max-w-lg mx-auto">
-              Con mis <strong>cursos online para padres</strong> y sesiones individuales vas a aprender
+              Con mis <strong>cursos online para padres</strong>, sesiones individuales y programa vas a aprender
               herramientas para dejar de padecer la adolescencia de tu hijo y empezar a disfrutarla.
-              En 2025, <strong>más de 300 madres y padres volvieron a conectar con sus hijos</strong> gracias a mis cursos y
-              sesiones individuales. Si querés ser la próxima familia, escribime.
+              En 2025, <strong>más de 300 madres y padres volvieron a conectar con sus hijos</strong> gracias a mis cursos,
+              sesiones individuales y programa. Si querés ser la próxima familia, escribime.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <a
@@ -37,7 +37,7 @@ export default function Hero() {
                 aria-label="Ir al programa de coaching de 8 semanas"
                 className="btn btn-primary hover:scale-[1.05] transition-transform"
               >
-                🌟 Coaching 8 semanas
+                🌟 Programa de 8 semanas
               </a>
               <a
                 href="https://wa.me/5492236861939?text=Hola%20Vale%2C%20me%20interesa%20una%20sesión%20individual%20para%20transformar%20mi%20vínculo%20con%20mi%20hijo.%20¿Me%20contás%20más?"
