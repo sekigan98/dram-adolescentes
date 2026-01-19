@@ -21,8 +21,7 @@ export default function Hero() {
             <p className="mt-6 text-lg sm:text-xl text-gray-700 max-w-lg mx-auto">
               Con mis <strong>cursos online para padres</strong>, sesiones individuales y programa vas a aprender
               herramientas para dejar de padecer la adolescencia de tu hijo y empezar a disfrutarla.
-              En 2025, <strong>más de 300 madres y padres volvieron a conectar con sus hijos</strong> gracias a mis cursos,
-              sesiones individuales y programa. Si querés ser la próxima familia, escribime.
+              En 2025, <strong>más de 300 madres y padres volvieron a conectar con sus hijos</strong>. Si querés ser la próxima familia, escribime.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <a
