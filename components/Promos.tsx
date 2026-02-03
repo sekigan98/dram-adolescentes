@@ -1,5 +1,5 @@
 import MotionFade from "./MotionFade";
-import { HiGift, HiCollection } from "react-icons/hi";
+import { HiCollection } from "react-icons/hi";
 
 const promos = [
   {
@@ -8,6 +8,7 @@ const promos = [
     waLink:
       "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%202%20cursos%20+%201%20sesión",
     icon: HiCollection,
+    badge: "Nuevo", // opcional
   },
 ];
 
@@ -18,10 +19,11 @@ export default function Promos() {
       aria-labelledby="promos-title"
       className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center items-start"
     >
+      <h2 id="promos-title" className="sr-only">Promociones</h2>
       {promos.map((p, i) => {
         const Icon = p.icon;
         return (
-          <MotionFade key={p.title} delay={i * 0.1}>
+          <MotionFade key={i} delay={i * 0.1}>
             <div className="card relative p-6 flex flex-col justify-between max-w-sm text-center hover:shadow-lg hover:scale-[1.02] transition-transform">
               {p.badge && (
                 <span className="absolute top-2 right-2 bg-brand-100 text-brand-700 text-xs font-semibold px-2 py-1 rounded">
