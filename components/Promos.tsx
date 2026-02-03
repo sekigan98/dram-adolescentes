@@ -3,14 +3,6 @@ import { HiGift, HiCollection } from "react-icons/hi";
 
 const promos = [
   {
-    title: "Promo: llevás 2 y te regalo 1", // 🥇 primero el más elegido
-    desc: "Con la adquisición de 2 cursos te regalo uno completamente gratis.",
-    waLink:
-      "https://wa.me/5492236861939?text=Hola%20Vale%2C%20quiero%20consultar%20por%20la%20promo%20llevás%202%20y%20te%20regalo%201",
-    icon: HiGift,
-    badge: "Más elegido",
-  },
-  {
     title: "Pack 2 cursos + 1 sesión individual",
     desc: "Elegí dos cursos y sumá una sesión personalizada con Vale.",
     waLink:
